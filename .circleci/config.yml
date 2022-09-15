@@ -80,7 +80,9 @@ jobs:
 workflows:
   build-workflow:
     jobs:
-      ##- create_infrastructure
+      - create_infrastructure
       ##- configure_infrastructure
       ##- smoke_test
-      - ex25_smoke_test
+      - ex25_smoke_test:
+          requires:
+            - create_infrastructure
