@@ -44,7 +44,7 @@ jobs:
     steps:
       - run: 
           name: "Update curl cmd"
-          command: apl add --update curl
+          command: apk add --update curl
       - run:
           name: "Perform Smoke Test"
           command: |
