@@ -23,12 +23,12 @@ jobs:
 
   configure_infrastructure:
     docker:
-      #- image: python:3.11-rc-alpine
-      - image: python:3.7-alpine3.11
+      - image: python:3.11-rc-alpine
+      #- image: python:3.7-alpine3.11
     steps:
       - checkout
       - add_ssh_keys:
-              fingerprints: ["25:f0:61:1c:f2:52:50:d7:88:b5:d0:c2:e9:5d:3a:57"]
+          fingerprints: ["25:f0:61:1c:f2:52:50:d7:88:b5:d0:c2:e9:5d:3a:57"]
       - run:  
           name: "Install Ansible"
           command: |
