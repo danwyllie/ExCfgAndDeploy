@@ -7,10 +7,10 @@ commands:
   destroy_environment:
     steps:
       - run:
-        name: "Destroy Environment"
-        when: on_fail
-        command: |
-          aws cloudformation delete-stack --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:7} --region ${AWS_DEFAULT_REGION}
+          name: "Destroy Environment"
+          when: on_fail
+          command: |
+            aws cloudformation delete-stack --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:7} --region ${AWS_DEFAULT_REGION}
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
